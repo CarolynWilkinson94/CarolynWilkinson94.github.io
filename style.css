@@ -64,11 +64,7 @@ select {
 }
 
 /* End CSS reset */
-
-body {
-    background-color: white;
-}
-
+/* Fonts */
 .quattrocento-regular {
   font-family: "Quattrocento", serif;
   font-weight: 400;
@@ -85,37 +81,47 @@ body {
 .montserrat-regular {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
 }
 
-.h1 {
-    font-family: "Quattrocento", sans-serif;
+.h1, .h2 {
+    font-family: "Quattrocento", serif;
 }
 
-.h2 {
-    font-family: "Quattrocento", sans-serif;
-}
 
-.h3 {
+.h3, .h4, .h5, .h6 {
     font-family: "Montserrat", sans-serif;
 }
-
-
-.h4 {
-    font-family: "Montserrat", sans-serif;
-}
-
-
-.h5 {
-    font-family: "Montserrat", sans-serif;
-}
-
-
-.h6 {
+h3, h4, h5, h6, p {
     font-family: "Montserrat", sans-serif;
 }
 
 .p {
     font-family: "Montserrat", sans-serif;
+}
+/* End fonts */
+/* Header */
+.header {
+    height: 20vh;
+    background-color: var(--brand);
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-img {
+    width: 200px;
+    height: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    
+}
+
+    
+
+body {
+    background-color: white;
 }
