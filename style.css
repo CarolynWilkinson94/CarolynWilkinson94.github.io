@@ -4,8 +4,12 @@
     --base-light:#eae0d5;
     --white: white;
     --black:black;
+    --space-small:8px;
+    --space-medium:16px;
+    --space-large:32px;
+    --space-extralarge:64px;
 }
-
+/* end root */
 /* CSS reset */
 html {
     box-sizing: border-box;
@@ -64,29 +68,49 @@ select {
 }
 
 /* End CSS reset */
-/* Fonts */
+
+/* Utility Settings */
+
+.padding-small {
+    padding: 8px;
+}
+
+.padding-medium {
+    padding: var(--space-medium);
+}
+
+.padding-large {
+    padding:32px;
+}
+
+.padding-extralarge {
+    padding:64px;
+}
+/*End Utility Settings  */
+/* General styles*/
 .quattrocento-regular {
   font-family: "Quattrocento", serif;
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 
-.quattrocento-bold {
-  font-family: "Quattrocento", serif;
-  font-weight: 700;
-  font-style: normal;
-}
 
 
 .montserrat-regular {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 
-.h1, .h2 {
+.h1 {
     font-family: "Quattrocento", serif;
+    font-weight: normal;
+}
+
+.h2 {
+    font-family: "Quattrocento", serif;
+    font-weight: normal;
 }
 
 
@@ -100,28 +124,154 @@ h3, h4, h5, h6, p {
 .p {
     font-family: "Montserrat", sans-serif;
 }
-/* End fonts */
-/* Header */
-.header {
-    height: 20vh;
-    background-color: var(--brand);
-    margin: 0px;
-    padding: 0px;
-}
-
-.header-img {
-    width: 200px;
-    height: auto;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
-   
-    
-}
-
-    
 
 body {
     background-color: white;
+}
+/* End general styles */
+/* Header */
+
+.header {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--brand);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* nav on the right */
+}
+
+.header-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px 0 0;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 10px;
+}
+
+.nav li:last-child {
+    margin-right: 0;
+}
+
+.nav li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: var(--base-light);
+    font-size: 20px;
+}
+
+.nav li a:hover {
+    color: var(--action);
+}
+
+
+ul {
+    list-style:none;
+    text-decoration: none;
+
+}
+li {
+    display:inline-block;
+    margin-right:10px;
+    text-decoration: none;
+}
+
+    
+.circle {
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    background-color: white;
+   
+}
+
+/* End header */
+/* hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 6rem;
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 10px 0 0 0;
+}
+
+.hero-text .first-name,
+.hero-text .last-name {
+  display: block;
+}
+
+.hero-text .first-name {
+  font-weight: normal;
+  margin-top: 10px;
+  position:relative;
+  left:100px;
+  top:0;
+}
+
+.hero-text .last-name {
+  font-weight: normal;
+  margin-top: 10px;
+  position:relative;
+  left:300px;
+  top:0;
+}
+
+.hero-text .intro {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.hero-text .description {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 20px;
+  max-width: 500px;
+  position:relative;
+  left:400px;
+}
+
+.hero img {
+  width: 300px;
+  height: auto;
+  border: 20px solid var(--action);
+  border-radius: 5%;
+  flex-shrink: 0;
+}
+
+/* End hero */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    width: 100%;
+    box-sizing: border-box;
 }
