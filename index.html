@@ -31,7 +31,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero container">
             <div class="hero-text">
                 <h3 class="intro">Hi, I’m</h3>
                 <h1>
@@ -40,82 +40,94 @@
                 </h1>
                 <h3 class="description">a developer and creative based in Perth, Australia.</h3>
             </div>
-            <img src="Img/CarolynThomas_smallimg-4512 (3).jpg" alt="Portrait of Carolyn Wilkinson" />
+            <img src="Img/CarolynThomas_smallimg-4512 (3).jpg" alt="Portrait of Carolyn Wilkinson" class="hero-img"/>
         </section>
+        
+        <section class="about container" id="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>ABOUT ME</h2>
+                    <p>I’m a developer based in Perth, Australia and I am passionate about creating beautiful, functional web-based products that meet client needs. I am also a professional singer/songwriter, Registered Music Therapist, dog mum and (very) amateur golfer.</p>
+                </div>
+            
+                <div class="skills">
+                    <h3>SKILLS</h3>
+                        <ul>
+                            <li><i class="fa fa-code" aria-hidden="true"></i><span>HTML</span></li>
+                            <li><i class="fa fa-css3" aria-hidden="true"></i><span>CSS</span></li>
+                            <li><i class="fa-solid fa-spinner"></i><span>New skills loading</span></li>
+                        </ul>
+                </div>
+            </div>
 
-        <section class="about" id="about">
-            <div>
-                <h2>ABOUT ME</h2>
-                <p>I’m a developer based in Perth, Australia and I am passionate about creating beautiful, functional web-based products that meet client needs. I am also a professional singer/songwriter, Registered Music Therapist, dog mum and (very) amateur golfer.</p>
-            </div>
-            <div>
-                <h3>SKILLS</h3>
-                    <ul>
-                        <li><i class="fa fa-code" aria-hidden="true"></i><span>HTML</span></li>
-                        <li><i class="fa fa-css3" aria-hidden="true"></i><span>CSS</span></li>
-                        <li><i class="fa-solid fa-spinner"></i>New skills loading</li>
-                    </ul>
-            </div>
-            <div>
+            <div class="social-icons">
                 <ul>
-                    <li><a href="https://github.com/CarolynWilkinson94/CarolynWilkinson94.github.io"><img src="Img/github-mark.png" alt="git hub logo"></a></li>
-                    <li><a href="https://www.linkedin.com/in/carolyn-wilkinson-206856136/"><img src="Img/InBug-Black.png" alt="linked in logo"></a></li>
+                    <li><a href="https://github.com/CarolynWilkinson94/CarolynWilkinson94.github.io"><img src="Img/github-mark.png" alt="git hub logo" class="social-icons"></a></li>
+                    <li><a href="https://www.linkedin.com/in/carolyn-wilkinson-206856136/"><img src="Img/InBug-Black.png" alt="linked in logo" class="social-icons"></a></li>
                 </ul>
             </div>
-            <a href="#">VIEW RESUME</a>
+            <a class="resume-button" href="#">VIEW RESUME</a>
         </section>
 
-        <section class="projects" id="projects">
-            <h2>PROJECTS</h2>
-            <div>
-                <article>
+        <section class="projects container" id="projects">
+            <div class="projects-text">
+                <h2>PROJECTS</h2>
+            </div>
+            <div class="project-list">
+                <article class="article">
                     <img src="Img/Screenshot 2025-06-18 094722.png" alt="screenshot of first project">
                     <h4>Project 1</h4>
-                    <p>This is my very first HTML and CSS project that I created during the She Codes Plus Program. I utilised HTML code to build the website and CSS to add styling and layout</p>
-                    <a href="project-page.html">VIEW</a>
+                    <p>This is my very first HTML and CSS project that I created during the She Codes Plus Program. I utilised HTML code to build the website and CSS to add styling and layout.</p>
+                    <a href="project-page.html" class="article-button">VIEW</a>
                 </article>
-                <article>
+                <article class="article">
                     <img src="Img/Screenshot 2025-06-18 102105.png" alt="screenshot of second project">
                     <h4>Project 2</h4>
                     <p>This is my second project.</p>
-                    <a href="#">VIEW</a>
+                    <a href="#" class="article-button">VIEW</a>
                 </article>
-                <article>
+                <article class="article">
                     <img src="Img/Screenshot 2025-06-18 102105.png" alt="screenshot of third project">
                     <h4>Project 3</h4>
                     <p>This is my third project.</p>
-                    <a href="#">VIEW</a>
+                    <a href="#" class="article-button">VIEW</a>
                 </article>
             </div>
-            <a href="projects.html">VIEW ALL PROJECTS</a>
+            <a href="projects.html" class="view-all-button">VIEW ALL PROJECTS</a>
         </section>
 
-        <section class="contact" id="contact">
-            <h2>CONTACT</h2>
-                <p>I'd love to hear from you! Please fill out the form below to get started.</p>
-                <h3>GET IN TOUCH</h3>
-                    <form action="process_form.php" method="post">
+        <section class="contact container" id="contact">
+            <div class="contact-text">
+                 <div>
+                    <h2>CONTACT</h2>
+                    <p>I'd love to hear from you! Please fill out the form below to get started.</p>
+                </div>
+                <div class="contact-form">
+                    <form action="mailto:carolynwilkinson94@gmail.com" method="post" enctype="text/plain" class="contact-form">
                         <label for="your-name">Your Name</label>
                         <input type="text" id="your-name">
                         <label for="your-email">Your Email</label>
-                        <input type="email" id="email">
+                        <input type="text" id="email">
                         <label for="message">Your Message</label>
                         <textarea name="message-text" id="message" rows="10"></textarea>
-                        <input type="submit" value="Submit">
-                </form>
-
+                        <input type="submit" value="Send" class="button">
+                    </form>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <footer>
+    <footer class="footer">
         <nav>
             <ul>
                 <li><a href="https://github.com/CarolynWilkinson94/CarolynWilkinson94.github.io"><img src="Img/github-mark.png" alt="git hub logo"></a></li>
                 <li><a href="https://www.linkedin.com/in/carolyn-wilkinson-206856136/"><img src="Img/InBug-Black.png" alt="linked in logo"></a></li>
             </ul>
         </nav>
-        <p> &copy; Carolyn Wilkinson 2025</p>
+        <div>
+            <p> &copy; Carolyn Wilkinson 2025</p>
+        </div>
 
     </footer>
 
