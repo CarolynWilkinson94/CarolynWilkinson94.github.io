@@ -10,6 +10,7 @@
     --space-extralarge:64px;
 }
 /* end root */
+
 /* CSS reset */
 html {
     box-sizing: border-box;
@@ -87,6 +88,7 @@ select {
     padding:64px;
 }
 /*End Utility Settings  */
+
 /* General styles*/
 .quattrocento-regular {
   font-family: "Quattrocento", serif;
@@ -133,6 +135,7 @@ body {
   width: 100%;
 }
 /* End general styles */
+
 /* Header */
 
 .header {
@@ -203,7 +206,9 @@ li {
 }
 
 /* End header */
-/* hero */
+
+
+/* hero section*/
 .hero {
   display: flex;
   flex-direction: row;
@@ -262,9 +267,9 @@ li {
   margin-top: 20px;
 }
 
-/* End hero */
+/* End hero section*/
 
-/* about page */
+/* about section */
 .about {
     display: flex;
     flex-direction: column;
@@ -302,7 +307,7 @@ li {
 }
 
 .about-text p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom:30px;
 
@@ -368,7 +373,7 @@ li {
     margin-top: 10px;
 }
 
-/* end about page */
+/* end about section */
 
 /* projects section*/
 .projects {
@@ -477,8 +482,9 @@ li {
 }
 
 /* end projects section */
+
 /* projects page */
-.projects-page {
+.projects-menu {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
@@ -489,7 +495,7 @@ li {
     min-height: 1000px;
 }
 
-.projects-page-article {
+.projects-menu-article {
     width: 300px;
     min-height:450px;
     max-height: 500px;
@@ -504,7 +510,40 @@ li {
     text-align: center;
     box-sizing: border-box;
 }
+/* end projects page */
 
+/* Individual project page */
+
+.individual-project-page {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.project-description {
+    flex:1;
+    max-width: 600px;
+}
+
+.individual-project-page img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+
+}
+
+.individual-project-page-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+
+/* End Individual project page */
 
 
 /* contact section */
@@ -588,6 +627,8 @@ li {
 
 /* end contact section */
 
+
+
 /* footer */
 .footer {
     display:flex;
@@ -599,3 +640,121 @@ li {
     width:100px;
     height:100px;
 }
+
+
+/* For small screens like mobile */
+@media screen and (max-width: 768px) {
+
+    /* General body and container responsiveness */
+    body {
+        font-size: 14px; /* Make the font size slightly smaller on mobile */
+    }
+
+    .container {
+        padding: 0 10px;
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column; /* Stack hero text and image vertically on mobile */
+        padding: 40px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem; /* Smaller text for smaller screens */
+    }
+
+    .hero-text .first-name,
+    .hero-text .last-name {
+        font-size: 3rem;
+        margin-left: 0;
+    }
+
+    .hero-img {
+        width: 80%; /* Make the image smaller on mobile */
+        max-width: 400px;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column; /* Stack about content vertically */
+        gap: 40px; /* Add gap between sections */
+    }
+
+    .about-text,
+    .skills {
+        width: 100%;
+        max-width: none; /* Remove any max-width restriction for smaller screens */
+    }
+
+    .skills {
+        margin-bottom: 30px; /* Add spacing between skill boxes */
+    }
+
+    .social-icons ul {
+        gap: 10px; /* Make space between social icons */
+    }
+
+    /* Projects Section */
+    .projects-page {
+        flex-direction: column; /* Stack the project articles vertically */
+        gap: 20px;
+    }
+
+    .projects-page-article {
+        width: 100%; /* Ensure articles take full width on mobile */
+        max-width: none;
+    }
+
+    /* Individual Project Page */
+    .individual-project-page {
+        flex-direction: column; /* Stack the image and description vertically on mobile */
+        align-items: center; /* Center the content */
+        gap: 20px;
+    }
+
+    .individual-project-page img {
+        width: 80%; /* Scale down image size on mobile */
+        max-width: 400px;
+    }
+
+    .project-description {
+        text-align: center; /* Center the text on mobile */
+    }
+
+    .individual-project-page-button {
+        flex-direction: column; /* Stack the buttons vertically */
+        gap: 10px;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column; /* Stack footer elements vertically */
+        text-align: center;
+    }
+
+    .footer img {
+        width: 60px; /* Smaller footer icon */
+        height: 60px;
+    }
+}
+
+/* For very small screens (like very narrow mobile devices) */
+@media screen and (max-width: 480px) {
+    /* Reduce text size even further */
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-text p,
+    .projects-text p,
+    .contact-text p {
+        font-size: 1.2rem; /* Adjust paragraph text for smaller screens */
+    }
+}
+
