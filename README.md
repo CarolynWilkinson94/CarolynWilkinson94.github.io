@@ -13,17 +13,13 @@
 ### Technical
  Add a short paragraph describing the features below. What strategies or design decisions did you work from? 
 
+I decided to create 3 web pages, with the vision that there will be more in the future. The first is my home page with all the essential information about me and how to contact me, as well as previews of my projects. The second page is a menu of all my projects, with short descriptions and images of each project, and links to follow to an individual project page. The 3rd page is the individual project page of my first project, which has a larger image of the project, links to view the site and the code and a description of the project. As I complete more projects, more pages will be added. Throughout the process, I have saved different versions to Github, which was very helpful when I lost the code for my header and needed to restore it. I have done my best to implement responsive design principles and from my tests, it seems to work well. I have used semantic html, particularly the <header>, <footer> and <article> tags throughout my website. 
  
-- [ ] At least 2 web pages.
-- [ ] Version controlled with Git
-- [ ] Deployed on GitHub pages.
-- [ ] Implements responsive design principles.
-- [ ] Uses semantic HTML.
 
 ### Bonus (optional)
  Add a short paragraph describing the features below, if you included any. 
-- [ ] Different styles for active, hover and focus states.
-- [ ] Include JavaScript to add some dynamic elements to your site. (Extra tricky!)
+
+I managed to include some hover states in my menu and buttons, and while I did try to add a hamburger menu for mobile viewing, I wasn't able  to complete this in time and will continue to work on this as my website evolves with my projects. 
 ​
 ### Screenshots
 > Please include the following:
@@ -32,5 +28,26 @@
 > 
 > You can do this by saving the images in a folder in your repo, and including them in your readme document with the following Markdown code: 
 
-####  image_title_goes_here 
-![Put a description of your image here](./relative_path_to_file)
+Home page - hero section
+![Home page hero section including my name and profile picture.](Screenshots/Screenshot 2025-06-22 144712.png)
+
+About section
+![Home page about section including my biography and list of skills, social links and my resume](Screenshots/Screenshot 2025-06-22 144739.png)
+
+Projects preview section
+![Home page projects preview section including previews of 3 of my projects and links to indiviudal project pages and the overall projects menu page](Screenshots/Screenshot 2025-06-22 144750.png)
+
+Contact section
+![Home page contact section including a contact form which links to my email address.](Screenshots/Screenshot 2025-06-22 144759.png)
+
+Projects menu page image 1
+![Projects menu page which shows half of my projects includging images, a short description and a link to their individual pages.](Screenshots/projects page 1.png)
+
+Projects menu page image 2
+![Projects menu page which shows the other half of my projects includging images, a short description and a link to their individual pages.](Screenshots/projects page 2.png)
+
+Individual project page
+![the individual project page for my first project, with a description, image and links to the website.](Screenshots/indiv project page.png)
+
+Hover screenshot
+![shows the hover function on my header menu, changing the selected option from light to dark colour. ](Screenshots/hover-screenshot.png)
