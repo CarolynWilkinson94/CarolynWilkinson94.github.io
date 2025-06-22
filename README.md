@@ -29,25 +29,25 @@ I managed to include some hover states in my menu and buttons, and while I did t
 > You can do this by saving the images in a folder in your repo, and including them in your readme document with the following Markdown code: 
 
 Home page - hero section
-![Home page hero section including my name and profile picture.](Screenshots/Screenshot 2025-06-22 144712.png)
+![Home page hero section including my name and profile picture.](Screenshots/Screenshot 2025-06-22 144712.png)(Screenshots/Screenshot 2025-06-22 150446.png)
 
 About section
-![Home page about section including my biography and list of skills, social links and my resume](Screenshots/Screenshot 2025-06-22 144739.png)
+![Home page about section including my biography and list of skills, social links and my resume](Screenshots/Screenshot 2025-06-22 144739.png)(Screenshots/Screenshot 2025-06-22 150458.png)(Screenshots/Screenshot 2025-06-22 150507.png)
 
 Projects preview section
-![Home page projects preview section including previews of 3 of my projects and links to indiviudal project pages and the overall projects menu page](Screenshots/Screenshot 2025-06-22 144750.png)
+![Home page projects preview section including previews of 3 of my projects and links to indiviudal project pages and the overall projects menu page](Screenshots/Screenshot 2025-06-22 144750.png)(Screenshots/Screenshot 2025-06-22 150514.png)(Screenshots/Screenshot 2025-06-22 150520.png)
 
 Contact section
-![Home page contact section including a contact form which links to my email address.](Screenshots/Screenshot 2025-06-22 144759.png)
+![Home page contact section including a contact form which links to my email address.](Screenshots/Screenshot 2025-06-22 144759.png)(Screenshots/Screenshot 2025-06-22 150527.png)
 
 Projects menu page image 1
-![Projects menu page which shows half of my projects includging images, a short description and a link to their individual pages.](Screenshots/projects page 1.png)
+![Projects menu page which shows half of my projects includging images, a short description and a link to their individual pages.](Screenshots/projects page 1.png)(Screenshots/Screenshot 2025-06-22 150544.png)
 
 Projects menu page image 2
-![Projects menu page which shows the other half of my projects includging images, a short description and a link to their individual pages.](Screenshots/projects page 2.png)
+![Projects menu page which shows the other half of my projects includging images, a short description and a link to their individual pages.](Screenshots/projects page 2.png)(Screenshots/Screenshot 2025-06-22 150551.png)
 
 Individual project page
-![the individual project page for my first project, with a description, image and links to the website.](Screenshots/indiv project page.png)
+![the individual project page for my first project, with a description, image and links to the website.](Screenshots/indiv project page.png)(Screenshots/Screenshot 2025-06-22 150602.png)(Screenshots/Screenshot 2025-06-22 150608.png)
 
 Hover screenshot
 ![shows the hover function on my header menu, changing the selected option from light to dark colour. ](Screenshots/hover-screenshot.png)
