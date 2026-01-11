@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,17 +18,25 @@
 </head>
 
 <body>
-     <header class="header">
-        <nav>
+    <header class="header">
+        <nav class="navbar">
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <ul class="nav">
+                <button class="close-menu" aria-label="Close navigation menu">&times;</button>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
-        <img src="Img/Carolyn.png" alt="logo" class="header-img circle">
+        <img src="Img/CW_Logo.png" alt="logo" class="header-img circle">
     </header>
+
+<div class="nav-overlay"></div>
 
 
     <main>
@@ -48,17 +56,26 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>ABOUT ME</h2>
-                    <p>I’m a learning developer based in Perth, Australia and I am passionate about creating beautiful, functional web-based products that meet client needs. I am also a professional singer/songwriter, Registered Music Therapist, dog mum and (very) amateur golfer. I began my career as a professional vocalist, performing and teaching across Perth, before studying my master’s in music therapy and setting up my private practice in 2022. 
-While I have enjoyed a varied career in the music industry, I felt it was time for a new challenge and decided to pursue my long-held interest in coding. After being accepted into the She Codes Plus Program, I have been able to begin this journey and am loving every step of the way. I would love to hear from you via my contact form below or through LinkedIn.
+                    <p>I’m a junior software developer with a non-traditional background and a practical, people-first approach to building software.
+
+After working in music therapy, I transitioned into tech, bringing strong communication skills, structured problem-solving, and experience working closely with stakeholders. I’ve since trained through intensive, project-based learning and work confidently across the full stack, with a particular strength in frontend development using React, HTML, CSS, and JavaScript, alongside backend work in Django and REST APIs.
+
+I’ve contributed to backend development, fixed frontend bugs, written supporting scripts, and helped deliver projects from requirements through to deployment. I’m adaptable, quick to learn, and comfortable stepping in wherever I’m needed.
+
+I’m now looking for a junior role where I can add value, grow alongside experienced developers, and build software that’s genuinely useful.
 </p>
                 </div>
             
                 <div class="skills">
                     <h3>SKILLS</h3>
                         <ul>
-                            <li><i class="fa fa-code" aria-hidden="true"></i><span>HTML</span></li>
-                            <li><i class="fa fa-css3" aria-hidden="true"></i><span>CSS</span></li>
-                            <li><i class="fa-solid fa-spinner"></i><span>New skills loading</span></li>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>Python</span></li>
+                            <li><span>Django</span></li>
+                            <li><span>JavaScript</span></li>
+                            <li><span>React</span></li>
+                            <li><span>Git</span></li>
                         </ul>
                 </div>
             </div>
@@ -69,7 +86,7 @@ While I have enjoyed a varied career in the music industry, I felt it was time f
                     <li><a href="https://www.linkedin.com/in/carolyn-wilkinson-206856136/"><img src="Img/InBug-Black.png" alt="linked in logo" class="social-icons"></a></li>
                 </ul>
             </div>
-            <a class="resume-button" href="Carolyn Wilkinson Resume 2024 Nov.pdf">VIEW RESUME</a>
+            <a class="resume-button" href="Carolyn_Wilkinson_Junior_Developer.pdf">VIEW RESUME</a>
         </section>
 
         <section class="projects container" id="projects">
@@ -85,14 +102,14 @@ While I have enjoyed a varied career in the music industry, I felt it was time f
                 </article>
                 <article class="article">
                     <img src="Img/Screenshot 2025-06-18 102105.png" alt="screenshot of second project">
-                    <h4>Project 2</h4>
-                    <p>This is my second project.</p>
+                    <h4>Python Weather App</h4>
+                    <p>This project is a weather app created in Python, and displayed in INSERT DISPLAY HERE.</p>
                     <a href="#" class="article-button">VIEW</a>
                 </article>
                 <article class="article">
-                    <img src="Img/Screenshot 2025-06-18 102105.png" alt="screenshot of third project">
-                    <h4>Project 3</h4>
-                    <p>This is my third project.</p>
+                    <img src="Img/tunesforchange.png" alt="screenshot of Tunes for Change website.">
+                    <h4>Crowdfunding Project</h4>
+                    <p>I created a 'crowdfunding' site using Django/DRF for the backend and React for the frontend. The site is aimed at underprivileged children who want help working on musical projects, and allows musicans or music teachers to pledge their time to different projects.</p>
                     <a href="#" class="article-button">VIEW</a>
                 </article>
             </div>
@@ -113,7 +130,7 @@ While I have enjoyed a varied career in the music industry, I felt it was time f
                         <input type="text" id="email">
                         <label for="message">Your Message</label>
                         <textarea name="message-text" id="message" rows="10"></textarea>
-                        <input type="submit" value="Send" class="button">
+                        <input type="submit" value="Send" id="contact-form-button">
                     </form>
                 </div>
             </div>
@@ -133,6 +150,57 @@ While I have enjoyed a varied career in the music industry, I felt it was time f
         </div>
 
     </footer>
+
+
+    <script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const overlay = document.querySelector('.nav-overlay');
+        const navLinks = document.querySelectorAll('.nav a');
+        const closeMenu = document.querySelector('.close-menu');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (nav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Close menu when close button is clicked
+        closeMenu.addEventListener('click', toggleMenu);
+
+        // Close menu when overlay is clicked
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu when a navigation link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu when escape key is pressed
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+</script>
 
 
 

@@ -14,15 +14,21 @@
 
 <body>
     <header class="header">
-        <nav>
+        <nav class="navbar">
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <ul class="nav">
-                <li><a href="index.html" id="home">HOME</a></li>
-                <li><a href="index.html" id="about">ABOUT</a></li>
-                <li><a href="index.html" id="projects">PROJECTS</a></li>
-                <li><a href="index.html" id="contact">CONTACT</a></li>
+                <button class="close-menu" aria-label="Close navigation menu">&times;</button>
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#projects">PROJECTS</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
             </ul>
         </nav>
-        <img src="Img/Carolyn.png" alt="logo" class="header-img circle">
+        <img src="Img/CW_Logo.png" alt="logo" class="header-img circle">
     </header>
 
 
@@ -54,6 +60,57 @@
         <p> &copy; Carolyn Wilkinson 2025</p>
 
     </footer>
+
+    <script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const overlay = document.querySelector('.nav-overlay');
+        const navLinks = document.querySelectorAll('.nav a');
+        const closeMenu = document.querySelector('.close-menu');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (nav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Close menu when close button is clicked
+        closeMenu.addEventListener('click', toggleMenu);
+
+        // Close menu when overlay is clicked
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu when a navigation link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu when escape key is pressed
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+</script>
+
 
 </body>
 
