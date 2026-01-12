@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarolynWilkinson94</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav">
+                <button class="close-menu" aria-label="Close navigation menu">&times;</button>
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <img src="Img/CW_Logo.png" alt="logo" class="header-img circle">
+    </header>
+
+
+    <main class="projects-text container">
+        <h1>TAFE Personal Project Website</h1>
+        <div class="individual-project-page">
+             <div class="project-description">
+                <p>In this project for TAFE, I was required to choose a topic of my preference and create a website for it using only HTML, CSS and JavaScript - although I was only allowed to use JavaScript to validate the contact form. I chose to create a website for my own personal music business, which would advertise my performances, teaching and original music, as well as linking to my social media and examples of my work. I chose to use monochrome theme and keep the homepage very simple, centering around an image, while the content pages held more information but continued the simple, monochromatic effect.</p>
+                <div class="individual-project-page-button">
+                    <a href="https://github.com/CarolynWilkinson94/first_website" class="view-all-button">LINK TO SITE</a>
+                    <a href="https://github.com/CarolynWilkinson94/first_website" class="view-all-button">LINK TO CODE</a>
+                </div>
+            </div>
+            <div>
+                <img src="Img/personal_project.png" alt="screenshot of Carolyn Wilkinson Music website.">
+                <img src="Img/pp_about.png" alt="screenshot of Carolyn Wilkinson Music about page">
+                <img src="Img/pp_music.png" alt="screenshot of Carolyn Wilkinson Music music page">
+                <img src="Img/pp_contact.png" alt="screenshot of Carolyn Wilkinson Music contact page">
+            </div>
+        </div>
+        
+        
+
+    </main>
+
+    <footer class="footer">
+        <nav>
+            <ul>
+                <li><a href="https://github.com/CarolynWilkinson94"><img src="Img/github-mark.png" alt="git hub logo"></a></li>
+                <li><a href="https://www.linkedin.com/in/carolyn-wilkinson-206856136/"><img src="Img/InBug-Black.png" alt="linked in logo"></a></li>
+            </ul>
+        </nav>
+        <p> &copy; Carolyn Wilkinson 2025</p>
+
+    </footer>
+
+    <script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const overlay = document.querySelector('.nav-overlay');
+        const navLinks = document.querySelectorAll('.nav a');
+        const closeMenu = document.querySelector('.close-menu');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (nav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Close menu when close button is clicked
+        closeMenu.addEventListener('click', toggleMenu);
+
+        // Close menu when overlay is clicked
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu when a navigation link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu when escape key is pressed
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+</script>
+
+
+</body>
+
+
+</html>

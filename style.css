@@ -244,8 +244,8 @@ li {
 
     
 .circle {
-    width:135px;
-    height:135px;
+    width:145px;
+    height:145px;
     border-radius: 50%;
     background-color: var(--base-light);
    
@@ -260,6 +260,7 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 12px;
   padding: 80px 5%;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -557,34 +558,43 @@ li {
     text-align: center;
     box-sizing: border-box;
 }
+
+.projects-menu-article img {
+    margin-bottom: 5px;
+}
+
+.projects-menu-article a {
+    margin-bottom: 5px;
+}
 /* end projects page */
 
 /* Individual project page */
 
 .individual-project-page {
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "description images";
     gap: 50px;
     padding: 20px;
     flex-wrap: wrap;
 }
 
 .project-description {
-    flex:1;
+    grid-area: description;
     max-width: 600px;
 }
 
 .individual-project-page img{
+    grid-area: images;
     width: 100%;
     max-width: 600px;
     height: auto;
+    margin-bottom: 5px;
 
 }
 
 .individual-project-page-button {
-    display: flex;
-    justify-content: center;
+    grid-area: description;
     gap: 30px;
     margin-bottom: 100px;
 }
@@ -684,8 +694,9 @@ li {
 }
 
 .footer img {
-    width:100px;
-    height:100px;
+    width:75px;
+    height:75px;
+    margin-bottom: 10px;
 }
 
 /* Mobile styles */
@@ -832,30 +843,38 @@ li {
     }
 
     .projects-menu-article {
-        width: 90%; /* Ensure articles take reasonable width on mobile */
-        max-width: 350px; /* Limit maximum width for better readability */
-        margin: 0; /* Remove margin since we're using gap */
+        width: 90%; 
+        max-width: 350px; 
+        margin: 0; 
     }
-
     /* Individual Project Page */
     .individual-project-page {
-        flex-direction: column; /* Stack the image and description vertically on mobile */
-        align-items: center; /* Center the content */
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr;  
+        grid-template-areas: 
+            "description"
+            "images"; 
+        text-align: center;
+        gap: 30px;
+        padding: 20px;
     }
 
+
     .individual-project-page img {
-        width: 80%; /* Scale down image size on mobile */
+        width: 100%;
         max-width: 400px;
+        justify-self: center;  /* Center the image in its grid area */
     }
 
     .project-description {
-        text-align: center; /* Center the text on mobile */
+        text-align: center; 
     }
 
     .individual-project-page-button {
-        flex-direction: column; /* Stack the buttons vertically */
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
     }
 
     /* Footer */

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarolynWilkinson94</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav">
+                <button class="close-menu" aria-label="Close navigation menu">&times;</button>
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <img src="Img/CW_Logo.png" alt="logo" class="header-img circle">
+    </header>
+
+
+    <main class="projects-text container">
+        <h1>TAFE Python Wordle CLI Project</h1>
+        <div class="individual-project-page">
+             <div class="project-description">
+                <p>I developed this terminal-based Wordle-style game in Python as part of my Certificate IV in Information Technology (Web Development) at TAFE. The project was designed to strengthen my understanding of core programming concepts, including control flow, functions, data structures, and file handling.
+
+The game validates user input against a dictionary, scores guesses using Wordle-style feedback, and tracks attempts across six rounds. Game results are written to a file for persistence. I also wrote simple test cases to verify the scoring logic.
+
+While the core application runs in the terminal, I created a visual UI mock for my portfolio to clearly demonstrate the gameplay flow and scoring logic in a more accessible, front-end-friendly format.
+
+Tech: Python</p>
+                <div class="individual-project-page-button">
+                    <a href="https://github.com/CarolynWilkinson94/python-wordle-cli/tree/main/CW_ICTPRG302_Project_2025_S2" target="_blank" rel="noopener noreferrer" class="view-all-button">LINK TO CODE</a>
+                </div>
+            </div>
+            <div>
+                <img src="Img/wordle.png" alt="screenshot of Wordle game">
+            </div>
+        </div>
+        
+        
+
+    </main>
+
+    <footer class="footer">
+        <nav>
+            <ul>
+                <li><a href="https://github.com/CarolynWilkinson94"><img src="Img/github-mark.png" alt="git hub logo"></a></li>
+                <li><a href="https://www.linkedin.com/in/carolyn-wilkinson-206856136/"><img src="Img/InBug-Black.png" alt="linked in logo"></a></li>
+            </ul>
+        </nav>
+        <p> &copy; Carolyn Wilkinson 2025</p>
+
+    </footer>
+
+    <script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const overlay = document.querySelector('.nav-overlay');
+        const navLinks = document.querySelectorAll('.nav a');
+        const closeMenu = document.querySelector('.close-menu');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (nav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Close menu when close button is clicked
+        closeMenu.addEventListener('click', toggleMenu);
+
+        // Close menu when overlay is clicked
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu when a navigation link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu when escape key is pressed
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+</script>
+
+
+</body>
+
+
+</html>
