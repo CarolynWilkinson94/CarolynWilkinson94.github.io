@@ -565,6 +565,7 @@ li {
     object-fit: cover;
     margin-bottom: 5px;
     display: block;
+    /* Ensures consistent image sizes across all project cards */
 }
 
 .projects-menu-article a {
@@ -614,6 +615,7 @@ li {
     gap: 20px;
     align-items: center;
     margin-bottom: 80px;
+    /* Updated: ensure images are centered */
 }
 
 .additional-images img {
