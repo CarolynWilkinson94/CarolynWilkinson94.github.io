@@ -527,6 +527,7 @@ li {
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
+    text-align: center;
 }
 
 /* end projects section */
@@ -553,17 +554,21 @@ li {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
 }
 
-.projects-menu-article img {
+.projects-menu .projects-menu-article img {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
     margin-bottom: 5px;
+    display: block;
 }
 
 .projects-menu-article a {
+    margin-top: auto;
     margin-bottom: 5px;
 }
 /* end projects page */
@@ -572,11 +577,13 @@ li {
 
 .individual-project-page {
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "description images";
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas: 
+        "description hero"
+        "additional additional";
     gap: 50px;
     padding: 20px;
-    flex-wrap: wrap;
+  
 }
 
 .project-description {
@@ -584,19 +591,35 @@ li {
     max-width: 600px;
 }
 
-.individual-project-page img{
-    grid-area: images;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin-bottom: 5px;
-
-}
-
 .individual-project-page-button {
     grid-area: description;
     gap: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    grid-area: hero;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+}
+
+.additional-images {
+    grid-area: additional;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.additional-images img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 }
 
 
@@ -852,8 +875,9 @@ li {
         display: grid;
         grid-template-columns: 1fr;  
         grid-template-areas: 
+            "hero"
             "description"
-            "images"; 
+            "additional"; 
         text-align: center;
         gap: 30px;
         padding: 20px;
@@ -873,6 +897,7 @@ li {
     .individual-project-page-button {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 15px;
         margin-top: 20px;
     }
